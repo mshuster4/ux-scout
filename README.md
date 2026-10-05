@@ -31,9 +31,17 @@ This copies the skill into your `.claude/skills/` directory automatically.
 /plugin install ux-scout
 ```
 
-### Option 3: Manual
+### Option 3: Download (no terminal required)
 
-Copy the `skills/ux-scout/` folder into your Claude Code skills directory:
+1. Click the green **Code** button at the top of this repo, then **Download ZIP**
+2. Unzip the downloaded file
+3. Open Finder (Mac) or File Explorer (Windows)
+4. Navigate to your home folder, then into `.claude/skills/` (create the `skills` folder if it doesn't exist)
+5. Copy the `skills/ux-scout/` folder from the unzipped download into `.claude/skills/`
+
+The `.claude` folder is hidden by default. On Mac, press `Cmd + Shift + .` in Finder to show hidden folders. On Windows, enable "Show hidden files" in the View menu.
+
+### Option 4: Manual (terminal)
 
 ```
 cp -r skills/ux-scout ~/.claude/skills/ux-scout
