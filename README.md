@@ -1,6 +1,6 @@
 # UX Scout
 
-A Claude Code skill that performs deep UX competitive research and generates visual-first research documents with lo-fi direction sketches. Designed for designers, useful for PMs and developers as well.
+A Claude Code skill that performs deep UX competitive research and generates visual-first research documents with lo-fi direction sketches. Designed for designers, useful for PMs and Developers as well.
 
 ## What it does
 
@@ -10,7 +10,7 @@ Give UX Scout a design problem and it will:
 2. **Apply Nielsen's heuristics as a design thinking lens**, scaled to the problem you give it. Whether that's a full flow, a single interaction pattern, or anything in between
 3. **Synthesize patterns** across competitors: what's conventional, where they diverge, and what's missing
 4. **Generate lo-fi direction sketches** (3-7 configurable) ranging from convention-first to innovative
-5. **Output a single self-contained HTML file** with sticky nav, visual artifacts, and a recommendation
+5. **Output a single self-contained easy to scan HTML file** with sticky nav, visual artifacts, and a recommendation
 
 The output is visual-first. Every section leads with a diagram, chart, or wireframe. The document is scannable in 30 seconds by looking at visuals alone.
 
