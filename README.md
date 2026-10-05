@@ -1,20 +1,37 @@
 # UX Scout
 
-A Claude Code skill that performs deep UX competitive research and generates visual-first research documents with lo-fi direction sketches. Designed for designers, useful for PMs.
+A Claude Code skill that performs deep UX competitive research and generates visual-first research documents with lo-fi direction sketches. Designed for designers, useful for PMs and developers as well.
 
-## What It Does
+## What it does
 
 Give UX Scout a design problem and it will:
 
 1. **Research 3-6 competitors** that solve the same problem, with flow diagrams, IA maps, and wireframe sketches for each
-2. **Apply Nielsen's heuristics proactively** to the design challenge (not evaluating an existing UI, but informing new design)
-3. **Synthesize patterns** across competitors -- what's conventional, where they diverge, and what's missing
+2. **Apply Nielsen's heuristics as a design thinking lens**, scaled to the problem you give it. Whether that's a full flow, a single interaction pattern, or anything in between
+3. **Synthesize patterns** across competitors: what's conventional, where they diverge, and what's missing
 4. **Generate lo-fi direction sketches** (3-7 configurable) ranging from convention-first to innovative
 5. **Output a single self-contained HTML file** with sticky nav, visual artifacts, and a recommendation
 
 The output is visual-first. Every section leads with a diagram, chart, or wireframe. The document is scannable in 30 seconds by looking at visuals alone.
 
 ## Install
+
+### Option 1: Skills CLI (recommended)
+
+```
+npx skills add mshuster4/ux-scout
+```
+
+This copies the skill into your `.claude/skills/` directory automatically.
+
+### Option 2: Plugin marketplace
+
+```
+/plugin marketplace add mshuster4/ux-scout
+/plugin install ux-scout
+```
+
+### Option 3: Manual
 
 Copy the `skills/ux-scout/` folder into your Claude Code skills directory:
 
@@ -25,7 +42,7 @@ cp -r skills/ux-scout ~/.claude/skills/ux-scout
 That's it. UX Scout will trigger on phrases like:
 - "Research how other products handle [feature]"
 - "What do competitors do for [pattern]?"
-- "UX research for [feature] -- what patterns work?"
+- "UX research for [feature], what patterns work?"
 - "Best practices for [UI pattern]"
 
 ## Usage
@@ -47,10 +64,10 @@ If you invoke `/ux-scout` with no prompt, it will ask you a guided set of intake
 ### Modes
 
 - **Deep mode** (default): 4-6 competitors, 5 directions, sub-skill synthesis
-- **Quick mode**: 3 competitors, 3 directions, no sub-skills -- add "quick" to your prompt
+- **Quick mode**: 3 competitors, 3 directions, no sub-skills. Add "quick" to your prompt
 
 ```
-/ux-scout quick -- notification center patterns
+/ux-scout quick: notification center patterns
 ```
 
 ### Configurable directions
@@ -58,7 +75,7 @@ If you invoke `/ux-scout` with no prompt, it will ask you a guided set of intake
 Default is 5 directions. Request a different number (3-7):
 
 ```
-/ux-scout 3 directions -- scheduling calendar UX patterns
+/ux-scout 3 directions: scheduling calendar UX patterns
 ```
 
 ### Output format
@@ -67,7 +84,7 @@ Default is 5 directions. Request a different number (3-7):
 - **Markdown**: Add "markdown" to your prompt for teams that prefer docs
 
 ```
-/ux-scout markdown -- onboarding flow best practices
+/ux-scout markdown: onboarding flow best practices
 ```
 
 ## Output
@@ -89,7 +106,7 @@ The document includes:
 - Direction comparison chart
 - Recommendation with MVP scope
 
-## Optional: Enhanced Research
+## Optional: Enhanced research
 
 UX Scout works fully standalone with no dependencies. For richer persona, JTBD, and synthesis output, install [The Designer Skills Pack](https://github.com/Owl-Listener/designer-skills) by MC Dean:
 
@@ -99,20 +116,20 @@ UX Scout works fully standalone with no dependencies. For richer persona, JTBD, 
 
 Then install the `design-research` plugin from the Discover tab. UX Scout will automatically use these sub-skills when available:
 
-- `design-research:discover` -- persona + journey mapping
-- `design-research:jobs-to-be-done` -- JTBD analysis
-- `design-research:synthesize` -- research data synthesis
+- `design-research:discover` for persona + journey mapping
+- `design-research:jobs-to-be-done` for JTBD analysis
+- `design-research:synthesize` for research data synthesis
 
-If these aren't installed, UX Scout performs lightweight inline analysis instead -- same sections, slightly less depth.
+If these aren't installed, UX Scout performs lightweight inline analysis instead. Same sections, slightly less depth.
 
-## Example Invocations
+## Example invocations
 
 - "Research how other moving apps handle claims resolution"
 - "What are best practices for multi-step form wizards? Show me what competitors do"
-- "UX research for a scheduling calendar -- what patterns work?"
+- "UX research for a scheduling calendar, what patterns work?"
 - "How do logistics apps handle real-time status tracking? Research this before we design"
-- "Research notification center patterns -- I want to see what works before we prototype"
-- "/ux-scout quick markdown -- dashboard filter patterns"
+- "Research notification center patterns. I want to see what works before we prototype"
+- "/ux-scout quick markdown: dashboard filter patterns"
 
 ## License
 
