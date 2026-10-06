@@ -1,6 +1,6 @@
 # UX Scout
 
-A Claude Code skill that performs deep UX competitive research and generates visual-first research documents with lo-fi direction sketches. Designed for designers, useful for PMs and Developers as well.
+A Claude Code skill that performs deep UX competitive research and generates visual-first research documents with lo-fi direction sketches. Built for designers, PMs, and Developers.
 
 Give UX Scout a design problem and it will:
 
