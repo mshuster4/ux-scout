@@ -2,8 +2,6 @@
 
 A Claude Code skill that performs deep UX competitive research and generates visual-first research documents with lo-fi direction sketches. Designed for designers, useful for PMs and Developers as well.
 
-## What it does
-
 Give UX Scout a design problem and it will:
 
 1. **Research 3-6 competitors** that solve the same problem, with flow diagrams, IA maps, and wireframe sketches for each
@@ -47,13 +45,7 @@ The `.claude` folder is hidden by default. On Mac, press `Cmd + Shift + .` in Fi
 cp -r skills/ux-scout ~/.claude/skills/ux-scout
 ```
 
-That's it. UX Scout will trigger on phrases like:
-- "Research how other products handle [feature]"
-- "What do competitors do for [pattern]?"
-- "UX research for [feature], what patterns work?"
-- "Best practices for [UI pattern]"
-
-## Usage
+## How to use
 
 ### With a prompt
 
@@ -95,6 +87,15 @@ Default is 5 directions. Request a different number (3-7):
 /ux-scout markdown: onboarding flow best practices
 ```
 
+### Example prompts
+
+- "Research how other moving apps handle claims resolution"
+- "What are best practices for multi-step form wizards? Show me what competitors do"
+- "UX research for a scheduling calendar, what patterns work?"
+- "How do logistics apps handle real-time status tracking? Research this before we design"
+- "Research notification center patterns. I want to see what works before we prototype"
+- "/ux-scout quick markdown: dashboard filter patterns"
+
 ## Output
 
 UX Scout saves a self-contained HTML file to:
@@ -129,15 +130,6 @@ Then install the `design-research` plugin from the Discover tab. UX Scout will a
 - `design-research:synthesize` for research data synthesis
 
 If these aren't installed, UX Scout performs lightweight inline analysis instead. Same sections, slightly less depth.
-
-## Example invocations
-
-- "Research how other moving apps handle claims resolution"
-- "What are best practices for multi-step form wizards? Show me what competitors do"
-- "UX research for a scheduling calendar, what patterns work?"
-- "How do logistics apps handle real-time status tracking? Research this before we design"
-- "Research notification center patterns. I want to see what works before we prototype"
-- "/ux-scout quick markdown: dashboard filter patterns"
 
 ## License
 
