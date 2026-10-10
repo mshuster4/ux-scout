@@ -259,18 +259,22 @@ Save the output to: `docs/ux-research/YYYY-MM-DD-<topic>/research.html` (or `res
 
 2. Executive Summary Strip
    - Full-width bar at the top with icon-based key stats:
-     - Number of competitors analyzed (with icon)
-     - Top conventional pattern identified
-     - Key gap/opportunity found
-     - Recommended direction (with badge)
-   - Scannable in 5 seconds
+     - Number of competitors analyzed (number + a 2-4 word label)
+     - Top convention: 6 words max (e.g. "Active filters shown as chips")
+     - Key gap: 6 words max (e.g. "No help for zero results")
+     - Recommended direction: direction name only, no extra badge
+   - Scannable in 5 seconds. If a stat needs a second line, cut words.
 
 3. Problem Statement
-   - 2-3 sentence summary, visually distinct (large text or callout box)
+   - One or two sentences, 35 words max, in a callout
+   - Scope, user, and platform go on one plain muted text line below it,
+     separated by middots. Do not render them as chips.
+   - Mention out-of-scope items in that same line only if they matter
 
 4. Competitive Analysis (VISUAL-FIRST)
    For each competitor, render a "Competitor Card":
-   - Card with product name, 1-line summary, key pattern badge
+   - Card with product name, key pattern badge, and a summary of
+     20 words max on one line
    - User Flow Diagram (horizontal pill nodes with arrows)
    - Page IA Diagram (nested box layout)
    - Lo-fi UI Sketch (wireframe of their key screen)
@@ -331,6 +335,44 @@ Save the output to: `docs/ux-research/YYYY-MM-DD-<topic>/research.html` (or `res
 
 The research document should be clean, scannable, and visual-first:
 
+**Breathing room:**
+- Space between major sections: 96px minimum
+- Space between a section heading and its content: 32px
+- Space between competitor cards: 64px
+- Card padding: 40px. Space between visuals inside a card: 40px
+- Summary strip cells: 32px padding, and each stat fits on one or two lines
+- Body text width: 68ch max, even inside wide sections
+- Sidebar: at least 24px left padding so labels never touch or clip
+  at the window edge
+- When a section feels crowded, add space or cut content. Never shrink type.
+
+**Headings and short text:**
+- Document title: 8 words max, on one line at desktop width
+- Section and card headings: 5 words max
+- Summary strip stats: 6 words max each
+- Card summaries: 20 words max
+- No paragraph over 3 sentences anywhere in the document
+
+**Chips and badges: use sparingly:**
+- One badge per competitor card (its key pattern), and nothing else
+- Recommended direction gets one badge in the Directions section only
+- Priority badges are allowed in the heuristic chart only
+- Never use chips for metadata such as scope, user, platform, or purpose.
+  Write it as a plain muted line instead.
+- If you count more than 3 chips on one screen, convert the rest to plain text
+
+**Writing: no AI slop:**
+- Write plain, specific sentences. Each one should say something a
+  designer can act on.
+- No em dashes. Use periods or commas.
+- No filler or hype: "seamless", "robust", "intuitive", "powerful",
+  "leverage", "delve", "crucial", "game-changer", "in today's landscape"
+- No "not just X, it's Y" constructions, no rhetorical questions as headers,
+  no generic closing lines
+- Do not force ideas into groups of three
+- Name the exact product, screen, or behavior instead of describing it vaguely
+- Read every label aloud. If a designer wouldn't say it, rewrite it.
+
 **Layout:**
 - Use CSS Grid for the overall layout: sticky sidebar (200px) + main content
 - Main content max-width: 900px
@@ -339,7 +381,7 @@ The research document should be clean, scannable, and visual-first:
 
 **Colors and badges:**
 - Neutral palette: white background, dark text, light gray for borders
-- Use color-coded pill badges throughout instead of text labels:
+- Pill badge colors, used only where the chip rules below allow them:
   - High priority / risk: `background: #fee2e2; color: #dc2626` (red)
   - Medium: `background: #fef3c7; color: #d97706` (amber)
   - Low: `background: #d1fae5; color: #059669` (green)
@@ -400,7 +442,7 @@ When this skill is executed by a subagent (via the Agent tool), the subagent MUS
 1. **Read this SKILL.md file first** — before doing any research or writing any output.
 2. **Follow the output structure exactly** — the document MUST include ALL of these or it is non-conformant:
    - Sticky TOC sidebar (CSS Grid: 200px sidebar + main content) [HTML only]
-   - Executive Summary Strip with icon-based key stats
+   - Executive Summary Strip with icon-based key stats, each 6 words max
    - Competitor Cards with flow diagrams, IA diagrams, and wireframe sketches
    - Pattern Matrix with dot indicators
    - Cross-Cutting Insights with Gap Map (concentric circles)
@@ -411,7 +453,8 @@ When this skill is executed by a subagent (via the Agent tool), the subagent MUS
    - Sources footer on every Competitor Card, plus the full Sources section
 3. **Use the exact HTML Style Guidelines** from Step 6 — colors, typography, spacing, badges, flow diagram styling, wireframe vocabulary. Do NOT invent your own simple layout.
 4. **Follow the sourcing rules in Step 2.** Every competitor claim must link to a source you opened. Uncited or invented competitor details make the document non-conformant.
-5. **The output is visual-first** — if your document is mostly text with some tables, you have failed. Every section must lead with a visual artifact. The document should be scannable in 30 seconds by looking at visuals alone.
+5. **Follow the breathing room, short text, chip, and writing rules** in the HTML Style Guidelines. A crowded document with long headers or chip-heavy sections is non-conformant.
+6. **The output is visual-first** — if your document is mostly text with some tables, you have failed. Every section must lead with a visual artifact. The document should be scannable in 30 seconds by looking at visuals alone.
 
 ## Example Invocations
 
