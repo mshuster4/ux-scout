@@ -14,7 +14,27 @@ The output is visual-first. Every section leads with a diagram, chart, or wirefr
 
 ## Install
 
-### Option 1: Skills CLI (recommended)
+### Claude app (no terminal required)
+
+Works in the Claude desktop app on Mac and Windows.
+
+1. Open the Claude app
+2. Click **Customize** in the left sidebar, then open the **Plugins** tab
+3. Click the **Add** dropdown at the top right and choose **Add marketplace**
+4. Select **Add from a repository**, paste `mshuster4/ux-scout`, and sync
+5. Switch to the **Discover** tab and find **ux-scout** in the list
+6. Click the **+** on the plugin card to install it
+7. Switch back to **Yours** to confirm it is listed and enabled
+8. Start a new conversation and type `/ux-scout` followed by your design problem
+
+### Claude Code: plugin marketplace
+
+```
+/plugin marketplace add mshuster4/ux-scout
+/plugin install ux-scout@product-design-toolbox
+```
+
+### Claude Code: Skills CLI
 
 ```
 npx skills add mshuster4/ux-scout
@@ -22,24 +42,7 @@ npx skills add mshuster4/ux-scout
 
 This copies the skill into your `.claude/skills/` directory automatically.
 
-### Option 2: Plugin marketplace
-
-```
-/plugin marketplace add mshuster4/ux-scout
-/plugin install ux-scout
-```
-
-### Option 3: Download (no terminal required)
-
-1. Click the green **Code** button at the top of this repo, then **Download ZIP**
-2. Unzip the downloaded file
-3. Open Finder (Mac) or File Explorer (Windows)
-4. Navigate to your home folder, then into `.claude/skills/` (create the `skills` folder if it doesn't exist)
-5. Copy the `skills/ux-scout/` folder from the unzipped download into `.claude/skills/`
-
-The `.claude` folder is hidden by default. On Mac, press `Cmd + Shift + .` in Finder to show hidden folders. On Windows, enable "Show hidden files" in the View menu.
-
-### Option 4: Manual (terminal)
+### Manual (terminal)
 
 ```
 cp -r skills/ux-scout ~/.claude/skills/ux-scout

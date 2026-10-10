@@ -1,0 +1,13 @@
+{
+  "name": "ux-scout",
+  "version": "1.0.0",
+  "description": "Deep UX competitive research with visual-first output. Researches competitors, applies Nielsen's heuristics, synthesizes patterns, and generates lo-fi direction sketches.",
+  "author": {
+    "name": "mshuster4",
+    "url": "https://github.com/mshuster4"
+  },
+  "homepage": "https://github.com/mshuster4/ux-scout",
+  "repository": "https://github.com/mshuster4/ux-scout",
+  "license": "MIT",
+  "keywords": ["ux", "design", "research", "competitive-analysis", "heuristics"]
+}

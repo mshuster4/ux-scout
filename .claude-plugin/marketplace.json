@@ -1,0 +1,19 @@
+{
+  "name": "product-design-toolbox",
+  "owner": {
+    "name": "mshuster4",
+    "url": "https://github.com/mshuster4"
+  },
+  "metadata": {
+    "description": "Product design skills for Claude, from research to prototyping."
+  },
+  "plugins": [
+    {
+      "name": "ux-scout",
+      "source": "./",
+      "description": "Deep UX competitive research with visual-first output. Researches competitors, applies Nielsen's heuristics, synthesizes patterns, and generates lo-fi direction sketches.",
+      "version": "1.0.0",
+      "category": "design"
+    }
+  ]
+}

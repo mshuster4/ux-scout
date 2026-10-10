@@ -10,7 +10,7 @@ UX Scout can optionally leverage sub-skills from [The Designer Skills Pack](http
 
 ## Nielsen's 10 Usability Heuristics
 
-The heuristic evaluation framework referenced in this skill is based on [Jakob Nielsen's 10 Usability Heuristics for User Interface Design](https://www.nngroup.com/articles/ten-usability-heuristics/), originally published in 1994. These heuristics are industry-standard public domain knowledge. The bundled reference file (`references/nielsens-heuristics.md`) provides definitions and scoring criteria for use during research.
+The heuristic evaluation framework referenced in this skill is based on [Jakob Nielsen's 10 Usability Heuristics for User Interface Design](https://www.nngroup.com/articles/ten-usability-heuristics/), originally published in 1994. These heuristics are industry-standard public domain knowledge. The bundled reference file (`skills/ux-scout/references/nielsens-heuristics.md`) provides definitions and scoring criteria for use during research.
 
 ## ux-heuristic-eval
 
