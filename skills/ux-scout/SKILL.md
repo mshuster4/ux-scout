@@ -107,7 +107,7 @@ Print status after each competitor: `Researched competitor 2/5: [Product Name]`
 A horizontal step-by-step flow showing the user's journey through the feature. Requirements:
 - Use connected pill/box nodes with arrow connectors between them
 - Each step shows: action label on top, UI pattern tag below in brackets (e.g., `[Modal]`, `[Full page]`, `[Dropdown]`, `[Inline form]`)
-- Color-code steps by interaction type with a thin border or small dot only, never a tinted fill:
+- Color-code steps by interaction type with a soft tinted fill and matching darker text. No left border or accent bar on steps:
   - Blue (`--accent`) = full page / primary view
   - Amber (`--amber`) = modal / dialog / overlay
   - Green (`--green`) = inline / in-context action
@@ -335,12 +335,19 @@ Save the output to: `docs/ux-research/YYYY-MM-DD-<topic>/research.html` (or `res
 
 The research document should be clean, scannable, and visual-first:
 
+**Depth and surfaces:**
+- Layer the page: gray page background, white raised surfaces on top, light gray insets inside them
+- Raised surfaces (summary tiles, competitor cards, direction cards, recommendation): white, 1px `#e4e6eb` border, `box-shadow: 0 1px 2px rgba(16,24,40,.04), 0 4px 16px rgba(16,24,40,.06)`
+- Insets inside a card (IA diagram, UI sketch, flow area): `#f7f8fa` background, 10px radius, no shadow
+- Wireframes inside sketches keep the dashed gray wireframe vocabulary, sitting on the inset
+- Use depth to group, not dividers. Prefer a raised card over a row of thin lines.
+
 **Breathing room:**
 - Space between major sections: 96px minimum
 - Space between a section heading and its content: 32px
 - Space between competitor cards: 64px
 - Card padding: 40px. Space between visuals inside a card: 40px
-- Summary strip cells: 32px padding, and each stat fits on one or two lines
+- Summary strip: four separate raised tiles with 24px gaps and 28px padding. Each stat fits on one or two lines.
 - Body text width: 68ch max, even inside wide sections
 - Sidebar: at least 24px left padding so labels never touch or clip
   at the window edge
@@ -369,14 +376,14 @@ The page should look like a designer made it by hand, not like a generated dashb
 - **Uppercase monospace eyebrows everywhere.** Use one small uppercase label style, only for summary stat labels and diagram labels. Section headings need no eyebrow above them.
 - **Monospace for non-code text.** Use monospace only for real code or query syntax, such as `status:failed`. Chips, IA labels, and annotations use the body font.
 - **Boxes inside boxes.** One level of card is enough. Inside a card, separate content with space and a thin divider, not more bordered containers.
-- **Tinted, glowing fills.** No colored background tints on flow steps, cards, or callouts. Use a neutral fill with a thin colored border or a small color dot. Color marks meaning, never decoration.
+- **Glowing or saturated fills.** Tints stay soft and pale, and only where color carries meaning, such as flow step types or a recommended direction. No neon colors or glow effects.
 - **Accent bars.** No thick colored left border on quotes or callouts.
-- **Gradients, glows, and shadows.** No gradient text, gradient backgrounds, glow effects, or heavy drop shadows. A 1px border is enough.
-- **Too many colors on one screen.** One accent color plus neutrals. The flow-diagram type colors are the only exception, and they show up only as borders or dots.
+- **Gradients and glows.** No gradient text, gradient backgrounds, or glow effects. Use the soft elevation shadows defined under Depth and surfaces, nothing heavier.
+- **Too many colors on one screen.** One accent color plus neutrals. The flow-diagram type colors are the only exception.
 - **Emojis.** None anywhere: not as icons, not in headings, labels, text, chips, or status messages. Use plain text or simple CSS shapes for check and x marks.
 - **Everything centered or everything equal.** Use a clear type hierarchy and left alignment. Let one thing per section be the biggest.
 
-When in doubt, remove styling. Plain type, generous space, and thin rules look more intentional than decoration.
+When in doubt, remove decoration but keep depth. The page should feel like a polished product, with layered surfaces, not a flat wireframe.
 
 **Writing: no AI slop:**
 - Write plain, specific sentences. Each one should say something a
@@ -398,7 +405,8 @@ When in doubt, remove styling. Plain type, generous space, and thin rules look m
 - Responsive: sidebar collapses to a top horizontal nav on viewports < 900px
 
 **Colors and badges:**
-- Neutral palette: white background, dark text, light gray for borders
+- **Light mode only.** Never add a `prefers-color-scheme: dark` block or a dark theme.
+- Neutral palette: light gray page background (`#f5f6f8`), white surfaces, dark text (`#16181d`), light gray borders (`#e4e6eb`)
 - Pill badge colors, used only where the chip rules below allow them:
   - High priority / risk: `background: #fee2e2; color: #dc2626` (red)
   - Medium: `background: #fef3c7; color: #d97706` (amber)
@@ -407,12 +415,18 @@ When in doubt, remove styling. Plain type, generous space, and thin rules look m
 - Section dividers: thin `border-top` lines, not heavy `<hr>` rules
 
 **Competitor Cards:**
-- Each card: white background, subtle border, 12px border-radius, 24px padding
+- Each card: white background, 1px border, 14px border-radius, 40px padding, soft shadow (see Depth and surfaces)
 - Product name as a bold heading with key pattern as a badge beside it
 - Flow diagram, IA diagram, and UI sketch stack vertically within the card
 - Strengths/weaknesses as two columns with green-check / red-x icons
 
 **Flow Diagrams:**
+- Step fills, with no border except an optional 1px border in the same hue:
+  - Full page: `background: #eaf0fe; color: #1f4fd1`
+  - Modal / overlay / panel: `background: #fdf3e1; color: #9a5b06`
+  - Inline / in context: `background: #e6f5ec; color: #1e7a47`
+  - System step: `background: #f0f1f3; color: #5b616e`
+- Steps are rounded (10px), 14px padding, with the step number small above the label
 - Horizontal flex layout with pill-shaped step nodes
 - Arrow connectors between nodes (use CSS `::after` pseudo-elements or arrow characters)
 - Steps wrap to next line on narrow viewports
