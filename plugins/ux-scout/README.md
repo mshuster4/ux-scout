@@ -12,7 +12,7 @@ Give UX Scout a design problem and it will:
 
 The output is visual-first. Every section leads with a diagram, chart, or wireframe. The document is scannable in 30 seconds by looking at visuals alone.
 
-Part of the [Product Design Toolbox](../../README.md). See the main README for install steps.
+Part of the [Product Design Toolbox](../../README.md). See the [install steps](../../README.md#install) in the main README.
 
 ## How to use
 
@@ -86,7 +86,11 @@ The document includes:
 
 ## Optional: Enhanced research
 
-UX Scout works fully standalone with no dependencies. For richer persona, JTBD, and synthesis output, install [The Designer Skills Pack](https://github.com/Owl-Listener/designer-skills) by MC Dean:
+UX Scout works fully standalone with no dependencies. For richer persona, JTBD, and synthesis output, install [The Designer Skills Pack](https://github.com/Owl-Listener/designer-skills) by MC Dean.
+
+In the Claude app, add a second marketplace the same way you added this one, using `Owl-Listener/designer-skills`. Then install the `design-research` plugin from the Discover tab.
+
+In Claude Code:
 
 ```
 /plugin marketplace add Owl-Listener/designer-skills

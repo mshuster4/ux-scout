@@ -62,4 +62,4 @@ MIT. See [LICENSE](LICENSE).
 
 ## Credits
 
-See [CREDITS.md](CREDITS.md) for attribution to the projects and authors that informed this skill.
+See [CREDITS.md](CREDITS.md) for attribution to the projects and authors that informed these tools.
