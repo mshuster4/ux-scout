@@ -6,8 +6,8 @@
     "name": "mshuster4",
     "url": "https://github.com/mshuster4"
   },
-  "homepage": "https://github.com/mshuster4/ux-scout",
-  "repository": "https://github.com/mshuster4/ux-scout",
+  "homepage": "https://github.com/mshuster4/product-design-toolbox/tree/main/plugins/ux-scout",
+  "repository": "https://github.com/mshuster4/product-design-toolbox",
   "license": "MIT",
   "keywords": ["ux", "design", "research", "competitive-analysis", "heuristics"]
 }

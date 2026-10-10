@@ -10,7 +10,7 @@
   "plugins": [
     {
       "name": "ux-scout",
-      "source": "./",
+      "source": "./plugins/ux-scout",
       "description": "Deep UX competitive research with visual-first output. Researches competitors, applies Nielsen's heuristics, synthesizes patterns, and generates lo-fi direction sketches.",
       "version": "1.0.0",
       "category": "design"
