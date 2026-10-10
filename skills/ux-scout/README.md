@@ -4,7 +4,7 @@ A Claude skill that performs deep UX competitive research and generates visual-f
 
 Give UX Scout a design problem and it will:
 
-1. **Research 3-6 competitors** that solve the same problem, with flow diagrams, IA maps, and wireframe sketches for each
+1. **Research 3-6 competitors** that solve the same problem, with flow diagrams, IA maps, and wireframe sketches for each. Every competitor claim links to its source.
 2. **Apply Nielsen's heuristics as a design thinking lens**, scaled to the problem you give it, whether that's a full flow, a single interaction pattern, or anything in between
 3. **Synthesize patterns** across competitors: what's conventional, where they diverge, and what's missing
 4. **Generate lo-fi direction sketches** (3-7 configurable) ranging from convention-first to innovative
@@ -83,6 +83,7 @@ The document includes:
 - Lo-fi direction sketches with annotated wireframes
 - Direction comparison chart
 - Recommendation with MVP scope
+- Sources list with a citation for every competitor claim
 
 ## Optional: Enhanced research
 

@@ -76,6 +76,18 @@ Use WebSearch to research competitors that solve the same or similar problem. Re
 - Search for UX case studies and teardowns of similar features
 - Search for Nielsen Norman Group articles on the pattern type
 
+**Sourcing rules: MANDATORY, no exceptions**
+
+Every claim about a competitor must come from a source you actually found and opened during this session. Never fill gaps from memory or assumption.
+
+- **Cite every competitor claim.** Each competitor needs at least one source URL that supports how they solve the problem. Flows, IA diagrams, UI sketches, strengths and weaknesses all need a source behind them.
+- **Only cite pages you opened.** Use WebFetch or WebSearch results you actually read. Never write a URL from memory, guess a URL's path, or cite a page you did not load.
+- **Prefer primary sources.** Official help docs, product pages, release notes, app store listings and screenshots, and demo videos come first. Reviews, teardowns, and case studies are second. Mark secondary sources as secondary.
+- **Separate observed from inferred.** If a detail is shown in a source, state it plainly. If you are inferring it, such as a step between two documented screens, label it "Inferred" in the output.
+- **Never invent.** Do not make up products, features, screen layouts, step counts, quotes, statistics, or user numbers. If you cannot verify a competitor's approach, either drop that competitor and research another, or include it marked "Not verified" with what you could and could not confirm.
+- **Say when sources are thin.** If you cannot find enough sourced competitors for the mode, tell the user how many you verified rather than padding the list.
+- **Cite general claims too.** Best-practice and research claims, such as Nielsen Norman Group findings, need a source link just like competitor claims.
+
 **For each competitor, capture:**
 
 | Field | Description |
@@ -85,6 +97,7 @@ Use WebSearch to research competitors that solve the same or similar problem. Re
 | Key UX pattern | The primary interaction pattern used |
 | What works | Strengths from a UX perspective |
 | What doesn't | Weaknesses or gaps |
+| Sources | URL, page title, and source type (primary or secondary) for every claim above |
 
 Print status after each competitor: `Researched competitor 2/5: [Product Name]`
 
@@ -113,7 +126,7 @@ A simplified nested-box layout showing where the feature lives on the page. Requ
 - Show relative proportions (sidebar narrower than main content, etc.)
 
 #### C. Competitor UI Sketch
-A lo-fi wireframe mockup showing the competitor's actual UI for this feature. Requirements:
+A lo-fi wireframe mockup showing the competitor's actual UI for this feature. It must be reconstructed from a sourced screenshot, video, or help doc, and labeled "Based on: [source title]" with a link. If no visual source exists, say so instead of drawing one from imagination. Requirements:
 - Use the wireframe CSS vocabulary (dashed borders, gray boxes, placeholder text)
 - Show the key screen the user sees when performing the core action
 - Include enough detail to understand the layout and interaction model
@@ -262,6 +275,8 @@ Save the output to: `docs/ux-research/YYYY-MM-DD-<topic>/research.html` (or `res
    - Page IA Diagram (nested box layout)
    - Lo-fi UI Sketch (wireframe of their key screen)
    - Strengths/weaknesses as icon+text pairs (green checkmark / red x)
+   - Sources footer: numbered links to every source used for this card,
+     with "Inferred" or "Not verified" tags where they apply
 
    After all competitor cards:
    - Side-by-Side Flow Comparison -- all competitor flows stacked
@@ -304,6 +319,12 @@ Save the output to: `docs/ux-research/YYYY-MM-DD-<topic>/research.html` (or `res
     - Which direction to pursue and why (callout box)
     - MVP scope as a checklist
     - What to validate before committing
+
+11. Sources
+    - Full numbered list of every source cited in the document
+    - Each entry: page title, URL, source type (primary or secondary),
+      and which competitor or claim it supports
+    - Note any competitors marked "Not verified"
 ```
 
 #### HTML Style Guidelines
@@ -370,6 +391,7 @@ The research document should be clean, scannable, and visual-first:
 - Does not evaluate an existing interface — it informs new design decisions
 - Does not make final design decisions — it presents research-informed options
 - Does not replace user research with real users — it synthesizes existing knowledge and patterns
+- Does not invent competitor details — every competitor claim is cited, and anything unverified is labeled
 
 ## Subagent Execution -- MANDATORY
 
@@ -386,8 +408,10 @@ When this skill is executed by a subagent (via the Agent tool), the subagent MUS
    - Direction Sketches with wireframe mockups (gray boxes, dashed borders)
    - Direction Comparison chart (stacked horizontal bars)
    - Recommendation callout box
+   - Sources footer on every Competitor Card, plus the full Sources section
 3. **Use the exact HTML Style Guidelines** from Step 6 — colors, typography, spacing, badges, flow diagram styling, wireframe vocabulary. Do NOT invent your own simple layout.
-4. **The output is visual-first** — if your document is mostly text with some tables, you have failed. Every section must lead with a visual artifact. The document should be scannable in 30 seconds by looking at visuals alone.
+4. **Follow the sourcing rules in Step 2.** Every competitor claim must link to a source you opened. Uncited or invented competitor details make the document non-conformant.
+5. **The output is visual-first** — if your document is mostly text with some tables, you have failed. Every section must lead with a visual artifact. The document should be scannable in 30 seconds by looking at visuals alone.
 
 ## Example Invocations
 
