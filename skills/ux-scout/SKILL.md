@@ -373,7 +373,7 @@ The page should look like a designer made it by hand, not like a generated dashb
 - **Accent bars.** No thick colored left border on quotes or callouts.
 - **Gradients, glows, and shadows.** No gradient text, gradient backgrounds, glow effects, or heavy drop shadows. A 1px border is enough.
 - **Too many colors on one screen.** One accent color plus neutrals. The flow-diagram type colors are the only exception, and they show up only as borders or dots.
-- **Emoji as icons.** Never.
+- **Emojis.** None anywhere: not as icons, not in headings, labels, text, chips, or status messages. Use plain text or simple CSS shapes for check and x marks.
 - **Everything centered or everything equal.** Use a clear type hierarchy and left alignment. Let one thing per section be the biggest.
 
 When in doubt, remove styling. Plain type, generous space, and thin rules look more intentional than decoration.
@@ -382,6 +382,7 @@ When in doubt, remove styling. Plain type, generous space, and thin rules look m
 - Write plain, specific sentences. Each one should say something a
   designer can act on.
 - No em dashes. Use periods or commas.
+- No emojis in any text.
 - No filler or hype: "seamless", "robust", "intuitive", "powerful",
   "leverage", "delve", "crucial", "game-changer", "in today's landscape"
 - No "not just X, it's Y" constructions, no rhetorical questions as headers,
