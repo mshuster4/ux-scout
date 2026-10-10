@@ -259,7 +259,6 @@ Save the output to: `docs/ux-research/YYYY-MM-DD-<topic>/research.html` (or `res
 
 2. Executive Summary Strip
    - Full-width bar at the top with key stats (no icon tiles):
-     - Number of competitors analyzed (number + a 2-4 word label)
      - Top convention: 6 words max (e.g. "Active filters shown as chips")
      - Key gap: 6 words max (e.g. "No help for zero results")
      - Recommended direction: direction name only, no extra badge
@@ -352,7 +351,7 @@ The research document should be clean, scannable, and visual-first:
 - Space between a section heading and its content: 32px
 - Space between competitor cards: 64px
 - Card padding: 40px. Space between visuals inside a card: 40px
-- Summary strip: four separate raised tiles with 24px gaps and 28px padding. Each stat fits on one or two lines.
+- Summary strip: three separate raised tiles for top convention, key gap, and recommended direction, with 24px gaps and 28px padding. No competitor count tile. Each stat fits on one or two lines.
 - Body text width: 68ch max, even inside wide sections
 - Sidebar: at least 24px left padding so labels never touch or clip
   at the window edge
