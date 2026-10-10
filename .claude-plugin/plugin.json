@@ -1,0 +1,13 @@
+{
+  "name": "product-design-toolbox",
+  "version": "1.0.0",
+  "description": "Product design skills for Claude, from research to prototyping. Includes UX Scout for competitive UX research with visual-first output and lo-fi direction sketches.",
+  "author": {
+    "name": "mshuster4",
+    "url": "https://github.com/mshuster4"
+  },
+  "homepage": "https://github.com/mshuster4/product-design-toolbox",
+  "repository": "https://github.com/mshuster4/product-design-toolbox",
+  "license": "MIT",
+  "keywords": ["product-design", "ux", "design", "research", "competitive-analysis", "heuristics"]
+}
