@@ -13,7 +13,6 @@ More tools coming soon.
 ### Try asking UX Scout
 
 - "How do SaaS products handle inviting teammates to a workspace?"
-- "Research notification settings pages. What do people expect to control?"
 - "How do subscription apps handle cancellation without feeling like a trap?"
 
 ## How it fits together
