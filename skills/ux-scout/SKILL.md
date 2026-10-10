@@ -107,7 +107,7 @@ Print status after each competitor: `Researched competitor 2/5: [Product Name]`
 A horizontal step-by-step flow showing the user's journey through the feature. Requirements:
 - Use connected pill/box nodes with arrow connectors between them
 - Each step shows: action label on top, UI pattern tag below in brackets (e.g., `[Modal]`, `[Full page]`, `[Dropdown]`, `[Inline form]`)
-- Color-code steps by interaction type:
+- Color-code steps by interaction type with a thin border or small dot only, never a tinted fill:
   - Blue (`--accent`) = full page / primary view
   - Amber (`--amber`) = modal / dialog / overlay
   - Green (`--green`) = inline / in-context action
@@ -258,7 +258,7 @@ Save the output to: `docs/ux-research/YYYY-MM-DD-<topic>/research.html` (or `res
    - Collapsible on narrow viewports
 
 2. Executive Summary Strip
-   - Full-width bar at the top with icon-based key stats:
+   - Full-width bar at the top with key stats (no icon tiles):
      - Number of competitors analyzed (number + a 2-4 word label)
      - Top convention: 6 words max (e.g. "Active filters shown as chips")
      - Key gap: 6 words max (e.g. "No help for zero results")
@@ -303,7 +303,7 @@ Save the output to: `docs/ux-research/YYYY-MM-DD-<topic>/research.html` (or `res
 
 7. Research Synthesis (if sub-skills were invoked or inline analysis was performed)
    - Persona highlights, journey insights, JTBD statements
-   - Keep visual -- use cards or icon+text layouts, not paragraphs
+   - Keep visual -- use short lists or simple single-level cards, not paragraphs
 
 8. Direction Sketches
    - Each with wireframe mockup, rationale annotations, trade-offs
@@ -360,6 +360,23 @@ The research document should be clean, scannable, and visual-first:
 - Never use chips for metadata such as scope, user, platform, or purpose.
   Write it as a plain muted line instead.
 - If you count more than 3 chips on one screen, convert the rest to plain text
+
+**Visual design: no AI slop:**
+
+The page should look like a designer made it by hand, not like a generated dashboard. Avoid these common tells:
+
+- **Icon tiles.** No icons in rounded squares above stats or headings. Let the number or text carry the stat.
+- **Uppercase monospace eyebrows everywhere.** Use one small uppercase label style, only for summary stat labels and diagram labels. Section headings need no eyebrow above them.
+- **Monospace for non-code text.** Use monospace only for real code or query syntax, such as `status:failed`. Chips, IA labels, and annotations use the body font.
+- **Boxes inside boxes.** One level of card is enough. Inside a card, separate content with space and a thin divider, not more bordered containers.
+- **Tinted, glowing fills.** No colored background tints on flow steps, cards, or callouts. Use a neutral fill with a thin colored border or a small color dot. Color marks meaning, never decoration.
+- **Accent bars.** No thick colored left border on quotes or callouts.
+- **Gradients, glows, and shadows.** No gradient text, gradient backgrounds, glow effects, or heavy drop shadows. A 1px border is enough.
+- **Too many colors on one screen.** One accent color plus neutrals. The flow-diagram type colors are the only exception, and they show up only as borders or dots.
+- **Emoji as icons.** Never.
+- **Everything centered or everything equal.** Use a clear type hierarchy and left alignment. Let one thing per section be the biggest.
+
+When in doubt, remove styling. Plain type, generous space, and thin rules look more intentional than decoration.
 
 **Writing: no AI slop:**
 - Write plain, specific sentences. Each one should say something a
@@ -442,7 +459,7 @@ When this skill is executed by a subagent (via the Agent tool), the subagent MUS
 1. **Read this SKILL.md file first** — before doing any research or writing any output.
 2. **Follow the output structure exactly** — the document MUST include ALL of these or it is non-conformant:
    - Sticky TOC sidebar (CSS Grid: 200px sidebar + main content) [HTML only]
-   - Executive Summary Strip with icon-based key stats, each 6 words max
+   - Executive Summary Strip with key stats, each 6 words max
    - Competitor Cards with flow diagrams, IA diagrams, and wireframe sketches
    - Pattern Matrix with dot indicators
    - Cross-Cutting Insights with Gap Map (concentric circles)
@@ -453,7 +470,7 @@ When this skill is executed by a subagent (via the Agent tool), the subagent MUS
    - Sources footer on every Competitor Card, plus the full Sources section
 3. **Use the exact HTML Style Guidelines** from Step 6 — colors, typography, spacing, badges, flow diagram styling, wireframe vocabulary. Do NOT invent your own simple layout.
 4. **Follow the sourcing rules in Step 2.** Every competitor claim must link to a source you opened. Uncited or invented competitor details make the document non-conformant.
-5. **Follow the breathing room, short text, chip, and writing rules** in the HTML Style Guidelines. A crowded document with long headers or chip-heavy sections is non-conformant.
+5. **Follow the breathing room, short text, chip, visual design, and writing rules** in the HTML Style Guidelines. A crowded, decorated, or chip-heavy document is non-conformant.
 6. **The output is visual-first** — if your document is mostly text with some tables, you have failed. Every section must lead with a visual artifact. The document should be scannable in 30 seconds by looking at visuals alone.
 
 ## Example Invocations
