@@ -8,7 +8,7 @@ Product design skills for Claude, from early research to prototyping. Each tool 
 |---|---|
 | [UX Scout](plugins/ux-scout/README.md) | Researches how competitors solve a design problem, then turns the findings into a visual research document with lo-fi direction sketches. |
 
-More tools for wireframing, hi-fi design and prototyping are coming.
+More tools coming soon.
 
 ## How it fits together
 
