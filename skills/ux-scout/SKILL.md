@@ -310,14 +310,19 @@ Save the output to: `docs/ux-research/YYYY-MM-DD-<topic>/research.html` (or `res
    - Clearly labeled Direction 1/2/3 with philosophy subtitle
    - Use annotation callout boxes pointing to key design decisions
 
-9. Direction Comparison -- Radar Chart
-   - CSS-based radar/spider chart (or stacked horizontal bar comparison)
-     showing each direction scored across 5-7 dimensions:
-     - Risk, Innovation, User Familiarity, Engineering Complexity,
-       Scalability, Speed for Power Users, [problem-specific dimension]
-   - Each direction = different color line/bar
-   - If a radar chart is too complex in pure CSS, use a stacked
-     horizontal bar chart with grouped bars per dimension
+9. Direction Scorecard
+   - One table: directions as rows, 4 factors as columns, plus a
+     "Best for" column with a short phrase per direction
+   - Every factor is phrased so more is better, for example
+     "Easy for [user]", "Familiar", "Quick to build", "Safe bet".
+     Never use factors where a high score means something bad,
+     like "Risk" or "Complexity".
+   - Each score shows as 5 small dots, filled to the score.
+     No bars and no separate number column.
+   - Highlight the recommended row with a pale accent background
+   - Put one line above the table saying the scores are judgment
+     from the research, from 1 to 5
+   - Do not use radar charts or grouped bar charts
 
 10. Recommendation
     - Which direction to pursue and why (callout box)
@@ -448,7 +453,7 @@ When in doubt, remove decoration but keep depth. The page should feel like a pol
 
 **Charts and Visualizations:**
 - Bar charts: CSS flexbox with proportional-width divs
-- Radar/comparison: stacked horizontal bars grouped by dimension if true radar is too complex
+- Direction scorecard: a table with dot scores, as described in section 9 of the output structure
 - Pattern matrix: grid with `border-radius: 50%` dots for indicators
 - Gap map: concentric circles or Venn-style layout with CSS
 
@@ -480,7 +485,7 @@ When this skill is executed by a subagent (via the Agent tool), the subagent MUS
    - Cross-Cutting Insights with Gap Map (concentric circles)
    - Heuristic bar charts (horizontal bars, NOT tables)
    - Direction Sketches with wireframe mockups (gray boxes, dashed borders)
-   - Direction Comparison chart (stacked horizontal bars)
+   - Direction Scorecard (table with dot scores, recommended row highlighted)
    - Recommendation callout box
    - Sources footer on every Competitor Card, plus the full Sources section
 3. **Use the exact HTML Style Guidelines** from Step 6 — colors, typography, spacing, badges, flow diagram styling, wireframe vocabulary. Do NOT invent your own simple layout.

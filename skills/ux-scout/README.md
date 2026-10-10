@@ -81,7 +81,7 @@ The document includes:
 - Cross-cutting insights with gap map
 - Heuristic relevance bar chart
 - Lo-fi direction sketches with annotated wireframes
-- Direction comparison chart
+- Direction scorecard
 - Recommendation with MVP scope
 - Sources list with a citation for every competitor claim
 
